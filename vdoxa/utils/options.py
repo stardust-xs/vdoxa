@@ -14,10 +14,7 @@
 # limitations under the License.
 #
 # ======================================================================
-"""Utility for interacting with cmd using questionary.
-
-Type: `pip install questionary` to use this module.
-"""
+"""Utility for interacting with cmd using questionary."""
 
 import os
 from typing import Any, List, Optional, Union
@@ -46,10 +43,10 @@ def choose(question: str, **kwargs: Union[List, int, float, str]) -> str:
 
   Provides options to choose from. These options are then to be used
   for further code execution.
-  
+
   Args:
     question: Question or Message presenting multiple options.
-  
+
   Note:
     It is recommended to use this function when any one of the
     multiple options needs to be selected.
@@ -61,7 +58,7 @@ def select_file(question: str, dir_name: str) -> str:
   """Provides list of files.
   
   Provides option to select the file from a directory.
-  
+
   Args:
     question: Question or Message selecting multiple files.
     dir_name: Directory from which the file needs to be chosen from.

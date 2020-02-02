@@ -14,8 +14,7 @@
 # limitations under the License.
 #
 # ======================================================================
-"""
-The `vdoxa.parser` module helps exposing the main parser.
+"""The `vdoxa.parser` module helps exposing the main parser.
 
 The functions in this module allow the usage of the vdoXA module over
 the CLI. The function, 'global_parser' allows the use of 'vdoxa' keyword
@@ -28,9 +27,6 @@ with the 'pip' module.
 Todo:
     * Add support for handling 'help' as an argument.
 """
-# The following comment should be removed at some point in the future.
-# pylint: disable=import-error
-# pylint: disable=no-name-in-module
 
 import argparse
 
@@ -49,34 +45,28 @@ def global_parser() -> argparse.ArgumentParser:
   sharing a lot of visual similarities with the 'pip' module.
 
   Returns:
-      ArgumentParser object, which stores all the properties of the
-      main argument parser.
+    ArgumentParser object, which stores all the properties of the
+    main argument parser.
 
   Example:
-      >>> from vdoxa.parser import global_parser
-      >>> global_parser()
+    >>> from vdoxa.parser import global_parser
+    >>> global_parser()
 
-      ArgumentParser(prog='vdoxa', usage='vdoxa <command> [options] ...
+    ArgumentParser(prog='vdoxa', usage='vdoxa <command> [options] ...
   """
   print()
   prog = PROJECT_NAME.lower()
   usage = f'{prog} <command> [options]'
-  parser = argparse.ArgumentParser(prog=prog,
-                                   usage=usage,
+  parser = argparse.ArgumentParser(prog=prog, usage=usage,
                                    formatter_class=HelpFormatter,
                                    conflict_handler='resolve',
                                    epilog=strings.epilog,
                                    add_help=False)
   parser._positionals.title = 'Commands'
   parser._optionals.title = 'Extra Options'
-  parser.add_argument('-h',
-                      '--help',
-                      action='store_true',
-                      default=argparse.SUPPRESS,
-                      help='Show help.')
-  parser.add_argument('-V',
-                      '--version',
-                      action='store_true',
+  parser.add_argument('-h', '--help', action='store_true',
+                      default=argparse.SUPPRESS, help='Show help.')
+  parser.add_argument('-V', '--version', action='store_true',
                       default=argparse.SUPPRESS,
                       help='Show installed vdoXA version and exit.')
 
@@ -92,21 +82,21 @@ def main() -> None:
   """Primary application entrypoint.
 
   This function is called at the entrypoint. It means that when the
-  user runs this function it will display CLI for the pyXA module.
+  user runs this function it will display CLI for the vdoXA module.
 
   Example:
     >>> from vdoxa.parser import main
     >>> main()
 
     Usage:
-    vdoxa <command> [options]
+      vdoxa <command> [options]
 
     Commands:
-      create       Create project directory structure for the ...
+      trim       Trims the video for further processing ...
 
     Extra Options:
     -h, --help     Show help.
-    -V, --version  Show installed pyXA version and exit.
+    -V, --version  Show installed vdoXA version and exit.
 
     For specific information about a particular command, run ...
     Read complete documentation at: <https://github.com/xames3/vdoxa>

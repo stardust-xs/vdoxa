@@ -21,6 +21,8 @@ from typing import List, Optional, Tuple, Union
 import cv2
 import numpy as np
 
+# TODO(xames3): Remove suppressed pylint warnings.
+# pyright: reportMissingImports=false
 from vdoxa.vars.colors import green, yellow
 
 
@@ -29,7 +31,7 @@ def rescale(frame: np.ndarray,
             height: Optional[int] = None,
             interpolation: Optional[object] = cv2.INTER_AREA) -> np.ndarray:
   """Rescale the frame.
-  
+
   Rescale the stream to a desirable size. This is required before
   performing the necessary operations.
 

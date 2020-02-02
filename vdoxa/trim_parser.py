@@ -14,10 +14,7 @@
 # limitations under the License.
 #
 # ======================================================================
-"""Trim video subparser command.
-
-This command trims the video as per the requirements.
-"""
+"""Trim video subparser command."""
 
 import argparse
 import os
