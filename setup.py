@@ -30,6 +30,8 @@ from setuptools import find_packages, setup
 
 from vdoxa.vars import dev
 
+doclines = __doc__.split('\n')
+
 
 def use_readme() -> str:
   """Use `README.md` for parsing long description."""
@@ -44,6 +46,7 @@ setup(
   name=dev.PROJECT_NAME,
   version=dev.PROJECT_VERSION,
   url=dev.PROJECT_LINK,
+  download_url=dev.PROJECT_LINK,
   author=dev.AUTHOR,
   author_email=dev.AUTHOR_EMAIL,
   maintainer=dev.AUTHOR,
@@ -57,7 +60,7 @@ setup(
     'Natural Language :: English',
     ],
   license=dev.PROJECT_LICENSE,
-  description=f'{__doc__.split("\n")[1]}',
+  description=f'{doclines[1]}',
   long_description=use_readme(),
   long_description_content_type='text/markdown',
   keywords='opencv2 cv2 moviepy',

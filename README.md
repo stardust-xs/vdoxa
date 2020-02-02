@@ -3,4 +3,4 @@
 An open-source python package for trimming the videos.
 
 ## License
-Licensed under the [Apache License 2.0](https://github.com/xames3/vdo_splitter/blob/master/LICENSE). Copyright 2020 XAMES3.
+Licensed under the [Apache License 2.0](https://github.com/xames3/vdoxa/blob/master/LICENSE). Copyright 2020 XAMES3.
