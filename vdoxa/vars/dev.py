@@ -24,7 +24,7 @@ PROJECT_LICENSE = 'Apache 2.0'
 # This project adheres to Semantic Versioning Specification (SemVer)
 # starting with version 0.0.1.
 # You can read about it here: https://semver.org/spec/v2.0.0.html
-PROJECT_VERSION = '0.1'
+PROJECT_VERSION = '0.2'
 
 # Author details.
 AUTHOR = 'XAMES3'
