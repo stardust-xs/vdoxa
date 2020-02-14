@@ -23,6 +23,7 @@ from typing import Any, Optional, Union
 
 from moviepy.editor import VideoFileClip as vfc
 
+from vdoxa.utils.common import now
 from vdoxa.utils.file_ops import filename
 from vdoxa.utils.options import ask_numbers, confirm
 from vdoxa.vars.cmd import TRIM_END, TRIM_START
@@ -97,3 +98,4 @@ def trim_num_parts(source: Any, num_parts: int) -> None:
     start, end = start, start + split_part
     trim_video(source, file, start, end)
     start += split_part
+  print(f'Completed trimming {file}.', end='\r')
