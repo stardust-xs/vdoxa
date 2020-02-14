@@ -68,7 +68,7 @@ def select_file(question: str, dir_name: str) -> str:
   # with-list-comprehension
   files = {index[0]: index[1] for index in enumerate(os.listdir(dir_name))}
   key = select(question, [Choice(v, k) for k, v in files.items()]).ask()
-  return files[key]
+  return os.path.join(dir_name, files.get(key, 'new_file.xa'))
 
 
 def answer(question: str) -> Optional[str]:
